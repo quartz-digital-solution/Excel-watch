@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#f7f4ef" />
+  <meta name="description" content="Excel Watch House — premium watches, clocks, perfumes and professional watch care." />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Excel Watch House" />
+  <meta name="format-detection" content="telephone=no" />
+  <link rel="preload" as="image" href="assets/excel-logo.png" />
+  <title>Excel Watch House | Watches, Clocks, Perfumes & Service</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="splash-screen" id="splashScreen" aria-hidden="true">
+    <div class="splash-glow splash-glow-one"></div>
+    <div class="splash-glow splash-glow-two"></div>
+    <div class="splash-card">
+      <img src="assets/excel-logo.png" alt="Excel Watch House" />
+    </div>
+  </div>
+  <div class="noise" aria-hidden="true"></div>
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="Excel Watch House home">
+      <img src="assets/excel-logo.png" alt="Excel Watch House" />
+    </a>
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="#watches">Watches</a>
+      <a href="#clocks">Clocks</a>
+      <a href="#perfumes">Perfumes</a>
+      <a href="#service">Service</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <a href="#watches">Watches</a>
+    <a href="#clocks">Clocks</a>
+    <a href="#perfumes">Perfumes</a>
+    <a href="#service">Watch care</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <main>
+    <section class="hero">
+      <div class="hero-media">
+        <img src="https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&w=1800&q=88" alt="Luxury wrist watch" />
+        <div class="hero-shade"></div>
+      </div>
+      <div class="hero-copy reveal">
+        <p class="eyebrow">Excel Watch House</p>
+        <h1>Time, refined.</h1>
+        <p class="hero-text">A curated destination for watches, clocks, perfumes and dependable watch care — presented with a cleaner, more premium experience.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#watches">Explore watches</a>
+          <a class="text-link" href="#service">View services <span>↗</span></a>
+        </div>
+      </div>
+      <a href="#intro" class="scroll-note">Scroll to discover <span>↓</span></a>
+    </section>
+
+    <section class="intro section" id="intro">
+      <div class="intro-heading reveal">
+        <p class="eyebrow dark">Our selection</p>
+        <h2>Designed around what you actually come to the store for.</h2>
+      </div>
+      <div class="intro-copy reveal">
+        <p>Explore everyday watches, statement pieces, wall and desk clocks, fragrance options and practical repair services — all in one place.</p>
+      </div>
+    </section>
+
+    <section class="category-grid section narrow" aria-label="Shop categories">
+      <a class="category-card reveal" href="#watches">
+        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1200&q=86" alt="Wrist watch collection" loading="lazy">
+        <div class="category-overlay"></div>
+        <div class="category-content"><span>01</span><h3>Watches</h3><p>Everyday to premium</p></div>
+      </a>
+      <a class="category-card reveal" href="#clocks">
+        <img src="https://images.unsplash.com/photo-1501139083538-0139583c060f?auto=format&fit=crop&w=1200&q=86" alt="Modern clock" loading="lazy">
+        <div class="category-overlay"></div>
+        <div class="category-content"><span>02</span><h3>Clocks</h3><p>Home & desk pieces</p></div>
+      </a>
+      <a class="category-card reveal" href="#perfumes">
+        <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=1200&q=86" alt="Premium perfume bottle" loading="lazy">
+        <div class="category-overlay"></div>
+        <div class="category-content"><span>03</span><h3>Perfumes</h3><p>Fresh & signature scents</p></div>
+      </a>
+    </section>
+
+    <section class="product-section section" id="watches">
+      <div class="section-head reveal">
+        <div><p class="eyebrow dark">Watches</p><h2>Featured timepieces</h2></div>
+        <div class="filter-row" data-filter-group="watches">
+          <button class="filter active" data-filter="all">All</button>
+          <button class="filter" data-filter="classic">Classic</button>
+          <button class="filter" data-filter="sport">Sport</button>
+          <button class="filter" data-filter="smart">Modern</button>
+        </div>
+      </div>
+      <div class="product-grid" id="watchGrid"></div>
+    </section>
+
+    <section class="split-feature section" id="clocks">
+      <div class="split-image reveal"><img src="https://images.unsplash.com/photo-1563861826100-9cb868fdbe1c?auto=format&fit=crop&w=1400&q=86" alt="Decorative clock" loading="lazy"></div>
+      <div class="split-copy reveal">
+        <p class="eyebrow dark">Clocks</p>
+        <h2>Details that complete a room.</h2>
+        <p>From simple wall clocks to decorative table pieces, find styles that are functional without feeling ordinary.</p>
+        <div class="mini-points"><span>Wall clocks</span><span>Desk clocks</span><span>Gift pieces</span></div>
+        <button class="btn btn-outline" data-open-category="clocks">Browse clock styles</button>
+      </div>
+    </section>
+
+    <section class="perfume-section section" id="perfumes">
+      <div class="perfume-copy reveal">
+        <p class="eyebrow">Perfumes</p>
+        <h2>A finishing touch beyond time.</h2>
+        <p>Discover fragrances for daily wear, gifting and special occasions, with fresh, woody, warm and clean profiles.</p>
+        <a class="btn btn-light" href="#contact">Ask about current perfumes</a>
+      </div>
+      <div class="perfume-image reveal"><img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=1500&q=88" alt="Perfume collection" loading="lazy"></div>
+    </section>
+
+    <section class="service-section section" id="service">
+      <div class="service-head reveal">
+        <p class="eyebrow dark">Watch care</p>
+        <h2>Service that keeps your watch in use.</h2>
+        <p>Simple maintenance, repair support and fitting help for everyday watch ownership.</p>
+      </div>
+      <div class="service-grid">
+        <article class="service-card reveal"><span>01</span><h3>Battery replacement</h3><p>Quick battery replacement for compatible quartz watches.</p></article>
+        <article class="service-card reveal"><span>02</span><h3>Strap & bracelet fitting</h3><p>Size adjustment, strap replacement and fit correction.</p></article>
+        <article class="service-card reveal"><span>03</span><h3>Glass & exterior care</h3><p>Assessment for scratched or damaged glass and case-related issues.</p></article>
+        <article class="service-card reveal"><span>04</span><h3>Watch repair support</h3><p>Inspection and service guidance for watches that stop, run irregularly or need attention.</p></article>
+        <article class="service-card reveal"><span>05</span><h3>Clock service</h3><p>Basic clock troubleshooting and repair support for selected models.</p></article>
+        <article class="service-card reveal"><span>06</span><h3>Cleaning & finishing</h3><p>Basic exterior cleaning to refresh the look of frequently worn pieces.</p></article>
+      </div>
+      <div class="service-cta reveal"><p>Not sure what your watch needs?</p><a href="#contact">Bring it in for an initial check <span>↗</span></a></div>
+    </section>
+
+    <section class="brand-strip" aria-label="Store features">
+      <div>Watches</div><span>•</span><div>Clocks</div><span>•</span><div>Perfumes</div><span>•</span><div>Service</div><span>•</span><div>Gifting</div>
+    </section>
+
+    <section class="contact section" id="contact">
+      <div class="contact-copy reveal">
+        <p class="eyebrow dark">Visit / enquire</p>
+        <h2>Looking for a specific model, perfume or repair?</h2>
+        <p>Send a quick enquiry and the store can confirm current availability, pricing or service options.</p>
+      </div>
+      <form class="contact-form reveal" id="enquiryForm">
+        <label><span>Name</span><input name="name" required placeholder="Your name" /></label>
+        <label><span>Phone</span><input name="phone" inputmode="tel" required placeholder="Mobile number" /></label>
+        <label><span>Enquiry type</span>
+          <select name="type">
+            <option>Watch purchase</option><option>Clock purchase</option><option>Perfume enquiry</option><option>Watch service</option><option>Other</option>
+          </select>
+        </label>
+        <label><span>Message</span><textarea name="message" rows="4" placeholder="Tell us what you are looking for"></textarea></label>
+        <button class="btn btn-primary" type="submit">Prepare enquiry</button>
+        <p class="form-note" id="formNote">This demo prepares your message on the device. Add the client’s WhatsApp number in <b>script.js</b> before publishing.</p>
+      </form>
+    </section>
+  </main>
+
+  <button class="install-btn" id="installBtn" hidden aria-label="Install Excel Watch House app">Install app</button>
+
+  <footer>
+    <div class="footer-brand"><img src="assets/excel-logo.png" alt="Excel Watch House"><p>Watches · Clocks · Perfumes · Service</p></div>
+    <div class="footer-nav"><a href="#watches">Watches</a><a href="#clocks">Clocks</a><a href="#perfumes">Perfumes</a><a href="#service">Service</a></div>
+    <div class="footer-bottom"><span>© <span id="year"></span> Excel Watch House</span><a href="#top">Back to top ↑</a></div>
+  </footer>
+
+  <div class="modal" id="productModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-sheet" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" data-close-modal aria-label="Close">×</button>
+      <div class="modal-image"><img id="modalImage" alt=""></div>
+      <div class="modal-info"><p class="eyebrow dark" id="modalTag"></p><h3 id="modalTitle"></h3><p id="modalDesc"></p><div class="modal-meta" id="modalMeta"></div><a href="#contact" class="btn btn-primary" data-close-modal>Enquire about this</a></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
