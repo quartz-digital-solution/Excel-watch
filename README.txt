@@ -1,20 +1,22 @@
-EXCEL WATCH HOUSE — LUXURY WEBSITE
+Excel Watch House — Customer Website
 
-Files:
-- index.html
-- styles.css
-- script.js
-- assets/excel-logo.png
+Included:
+- Premium responsive customer website
+- Watches, clocks and perfume collections
+- Product detail modal
+- Shopping bag and checkout/order flow
+- Stylish custom dropdowns (not the device-default select UI)
+- Customer enquiry form without WhatsApp redirection
+- Installable PWA support
+- White installed-app launch background via manifest (no extra website splash page)
+- Install button hides automatically when the app is installed / opened in standalone mode
+- Service worker + app icons
 
-Before publishing:
-1. Open script.js and set WHATSAPP_NUMBER with the client's WhatsApp number including country code, without + or spaces.
-2. Replace any sample product names/images with the client’s exact stock if needed.
-3. Add the exact showroom address/phone if you want them shown publicly.
+Important about orders:
+This customer-only build stores orders and enquiries locally in the browser so the checkout flow works without WhatsApp and without an admin/backend yet.
+When the admin page is created, connect the same order structure to Supabase or another shared backend so orders appear across devices in the admin panel.
 
-The website is responsive and works as a static site on Cloudflare Pages, Netlify, GitHub Pages, or similar hosting.
-
-
-PWA / Installable update:
-- Uses the uploaded Excel logo across header, footer, splash screen and app icons.
-- Installable via browser because manifest.webmanifest + service worker are included.
-- A floating Install app button appears when the browser supports installation.
+Local storage keys:
+- excel_watch_house_orders_v1
+- excel_watch_house_enquiries_v1
+- excel_watch_house_cart_v2
